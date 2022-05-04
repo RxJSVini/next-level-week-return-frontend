@@ -1,10 +1,13 @@
 import React from "react";
+import { Popover } from "@headlessui/react";
+import { X } from "phosphor-react";
+
 
 const CloseButton:React.FC<{}> = () =>{
     return(
-        <div>
-            
-        </div>
+        <Popover.Button className="top-5 right-5 absolute text-zinc-400 hover:text-zinc-100" title="Fechar formulário">
+            <X weight="bold" className="w-4 h-4"/>
+        </Popover.Button>
     )
 }
 
