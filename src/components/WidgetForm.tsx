@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const WidgetForm:React.FC<{}> = () =>{
     return(
@@ -7,7 +8,7 @@ const WidgetForm:React.FC<{}> = () =>{
                 <span>Deixe seu feedback</span>
             </header>
             <footer className="text-x3 text-neutral-400">
-                Feito com 😍❤️ durante a NLW Return  <a></a>
+                    Feito com 😍❤️ durante a <Link className="underline underline-offset-2" target="_blank" to="https://blog.rocketseat.com.br/tag/nlw/">NLW Return</Link>
             </footer>
         </div>
     )
