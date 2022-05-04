@@ -1,7 +1,7 @@
 import React,{ useEffect } from 'react';
 import { Widget } from "./components/Widget";
 
-const App:React.FC = ()=>{
+const App:React.FC<{}> = ()=>{
   useEffect(() =>{
     document.title='Sistema de FeedBacks';
   }, []);
