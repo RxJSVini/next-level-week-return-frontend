@@ -1,10 +1,10 @@
-import React,{ useEffect } from 'react';
+import React from 'react';
 import { Widget } from "./components/Widget";
 
 const App:React.FC<{}> = ()=>{
-  useEffect(() =>{
-    document.title='Sistema de FeedBacks';
-  }, []);
+  // React.useEffect(() =>{
+  //   document.title='Sistema de FeedBacks';
+  // }, []);
 
   return(
     <div className='flex gap-2'>
