@@ -1,5 +1,7 @@
 import React from "react";
 import { CloseButton } from "../../CloseButton";
+import { history } from "../../../history";
+
 const FeedbackSuccessStep: React.FC<{}> = () => {
     return (
         <>
@@ -16,7 +18,9 @@ const FeedbackSuccessStep: React.FC<{}> = () => {
                 <span className="text-xl mt-2">Agradecemos o seu Feedback!</span>
             
             
-                <button className="py-2 px-6 mt-6 bg-zinc-800 rounded-md border-transparent text-sm leading-6 hover:bg-zinc-700 transition-colors focus:ring-2 focus:ring-offset-2 focus:ring-offset-zinc-900 disabled:opacity-50 disabled:hover-brand-500">
+                <button className="py-2 px-6 mt-6 bg-zinc-800 rounded-md border-transparent text-sm leading-6 hover:bg-zinc-700 transition-colors focus:ring-2 focus:ring-offset-2 focus:ring-offset-zinc-900 disabled:opacity-50 disabled:hover-brand-500"
+                onClick={() => history.push("/")}
+                >
                     Quero enviar outro
 
                 </button>

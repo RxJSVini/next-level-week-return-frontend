@@ -1,5 +1,5 @@
 import React from 'react';
-import { Widget } from "./components/Widget";
+import { Router } from "./routes";
 
 const App:React.FC<{}> = ()=>{
   // React.useEffect(() =>{
@@ -8,7 +8,7 @@ const App:React.FC<{}> = ()=>{
 
   return(
     <div className='flex gap-2'>
-      <Widget/>
+      <Router/>
     </div>
   )
 };
