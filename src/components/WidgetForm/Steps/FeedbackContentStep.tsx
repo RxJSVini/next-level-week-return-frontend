@@ -4,6 +4,7 @@ import { feedBackTypes, FeedbackType } from "..";
 import { CloseButton } from "../../CloseButton";
 import { ScreenshotButton } from "../ScreenshotButton";
 import { api } from "../../../services/api";
+import axios from "axios";
 import { Loading } from "../Loading";
 
 interface FeedBackContentStepProps {
@@ -28,14 +29,16 @@ const FeedbackContentStep: React.FC<FeedBackContentStepProps> = ({ feedbackType,
         
         setIsSendingFeedback(true)
         const data = {type: feedbackType, comment, screenshot}
+  
 
-        api.post("/api/feedbacks", data)
+        axios.post("https://nlwreturnnode-production.up.railway.app/api/feedbacks", data)
         .then((response ) =>{
             console.log(response.data)
         })  
         .catch((error) =>{
             console.log(error)
         })
+
         setIsSendingFeedback(false);
         onFeedbackSent();
     }
